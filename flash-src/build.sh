@@ -5,14 +5,14 @@
 # You need Flex 4 SDK:
 # http://opensource.adobe.com/wiki/display/flexsdk/Download+Flex+4
 
-mxmlc \
+JAVA_HOME=$(/usr/libexec/java_home -v 1.6) mxmlc \
   -static-link-runtime-shared-libraries \
   -target-player=10.0.0 \
   -output=../WebSocketMain.swf \
   -source-path=src -source-path=third-party \
   src/net/gimite/websocket/WebSocketMain.as &&
 
-mxmlc \
+JAVA_HOME=$(/usr/libexec/java_home -v 1.6) mxmlc \
   -static-link-runtime-shared-libraries \
   -target-player=10.0.0 \
   -output=../WebSocketMainInsecure.swf \
